@@ -20,3 +20,4 @@ resource "aws_security_group" "part2sg" {
        cidr_blocks      = ["0.0.0.0/0"]
      }
 }
+
