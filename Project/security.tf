@@ -1,6 +1,7 @@
 resource "aws_security_group" "group-2" {
   name        = "group-2"
   description = "Allow TLS inbound traffic"
+  vpc_id = aws_vpc.main.id
 
   ingress {
     description      = "TLS from VPC"
@@ -25,7 +26,6 @@ resource "aws_security_group" "group-2" {
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
   }
-
 
   egress {
     from_port        = 0
